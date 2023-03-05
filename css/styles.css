@@ -135,6 +135,14 @@ body {
   padding-bottom: 188px;
   margin-right: auto;
   margin-left: auto;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-title {
@@ -190,8 +198,18 @@ body {
 .benefits {
   flex-basis: calc((100% - 72px) / 4);
 }
+.benefits-place {
+  width: 264px;
+  height: 112px;
+  background: #f4f4fd;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .feature-title {
-  margin-top: 0;
+  margin-top: 8px;
   margin-bottom: 8px;
 
   font-size: 20px;
@@ -206,7 +224,7 @@ body {
   color: var(--primary-text-color);
 }
 
-/* SECTION ADVANTAGES */
+/* SECTION ADVANTages */
 
 /* WHAT ARE WE DOING SECTION */
 .subject-name {
@@ -220,7 +238,6 @@ body {
 .task {
   display: flex;
   gap: 24px;
-  flex-wrap: wrap;
   margin-top: 72px;
 }
 
@@ -231,7 +248,7 @@ body {
 .team {
   display: flex;
   gap: 24px;
-  flex-wrap: wrap;
+
   margin-top: 72px;
   background: var(--buttons-background-color);
 }
@@ -249,7 +266,7 @@ body {
 
 .person-position {
   padding-top: 8px;
-  padding-bottom: 32px;
+  margin-bottom: 8px;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
@@ -259,6 +276,34 @@ body {
   line-height: 24px;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+}
+
+.team-social-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.team-social-item {
+  width: 40px;
+  height: 40px;
+}
+.team-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+}
+.team-social-link:is(:hover, :focus) {
+  background-color: var(--special-buttons-color);
+}
+.team-social-icon {
+  fill: currentColor;
 }
 
 /* OUR TEAM SECTION */
