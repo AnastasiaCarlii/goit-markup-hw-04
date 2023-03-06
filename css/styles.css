@@ -7,6 +7,8 @@
   --buttons-background-color: #f4f4fd;
   --footer-text-color: #e7e9fc;
   --special-buttons-color: #404bbf;
+  --customer-icons-color: #8e8f99;
+  --footer-special-color: #31d0aa;
 }
 
 h1,
@@ -25,6 +27,11 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--title-text-color);
 }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 .container {
   max-width: 1158px;
@@ -36,55 +43,8 @@ body {
 .section {
   padding: 120px 0;
 }
-.advantages {
-  padding-bottom: 0;
-}
-/* HEADER */
-.main-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 0;
-}
-.site-nav .list .link {
-  text-decoration: none;
-  font-style: normal;
-  color: var(--title-text-color);
-}
-.site-nav.list .link:hover,
-.site-nav.list .link:focus {
-  color: var(--accent-color);
-}
-.contact-item .link:focus,
-.contact-item .link:hover {
-  color: var(--special-buttons-color);
-}
 
-.list {
-  list-style: none;
-}
-.link {
-  text-decoration: none;
-  color: var(--title-text-color);
-  font-style: normal;
-}
-.header-item {
-  margin-right: 40px;
-}
-.header-item .item:last-child {
-  margin-right: 332px;
-}
-.contact-item {
-  display: flex;
-  margin-right: 40px;
-  margin-left: auto;
-}
-
-.task_item {
-  flex-basis: calc((100% - 48px) / 3);
-}
-
-/* HEADER */
+/* ...........HEADER */
 
 /* LOGO */
 
@@ -108,6 +68,7 @@ body {
 .site-nav {
   display: flex;
   line-height: 24px;
+  font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
 }
@@ -125,6 +86,45 @@ body {
   margin-left: 156px;
   margin-right: 40px;
 }
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+.site-nav .list .link {
+  text-decoration: none;
+  color: var(--title-text-color);
+}
+.site-nav.list .link:hover,
+.site-nav.list .link:focus {
+  color: var(--accent-color);
+}
+.contact-item .link:focus,
+.contact-item .link:hover {
+  color: var(--special-buttons-color);
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  color: var(--title-text-color);
+  font-style: normal;
+}
+.header-item {
+  margin-right: 40px;
+}
+.header-item .item:last-child {
+  margin-right: 332px;
+}
+.contact-item {
+  display: flex;
+  margin-right: 40px;
+  margin-left: auto;
+}
+
+/* HEADER */
 
 /* HERO SECTION */
 
@@ -175,7 +175,7 @@ body {
 }
 .button-primary:hover,
 .button-primary:focus {
-  background-color: #404bbf;
+  background-color: var(--special-buttons-color);
 }
 /* HERO SECTION */
 
@@ -201,9 +201,8 @@ body {
   flex-basis: calc((100% - 72px) / 4);
 }
 .benefits-place {
-  width: 264px;
   height: 112px;
-  background: #f4f4fd;
+  background: var(--buttons-background-color);
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -225,6 +224,9 @@ body {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
+.advantages {
+  padding-bottom: 0;
+}
 
 /* SECTION ADVANTages */
 
@@ -239,18 +241,22 @@ body {
 }
 .task {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   margin-top: 72px;
+}
+.task_item {
+  flex-basis: calc((100% - 48px) / 3);
 }
 
 /* WHAT ARE WE DOING SECTION */
 
-/* OUR TEAM SECTION */
+/* ////////////OUR TEAM SECTION */
 
 .team {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
-
   margin-top: 72px;
   background: var(--buttons-background-color);
 }
@@ -264,17 +270,15 @@ body {
 }
 .team-content {
   text-align: center;
+  padding: 32px 16px;
 }
 
 .person-position {
-  padding-top: 8px;
-  margin-bottom: 8px;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
 .person-name {
-  padding-top: 32px;
   line-height: 24px;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
@@ -284,7 +288,6 @@ body {
   display: flex;
   gap: 24px;
   justify-content: center;
-  margin-bottom: 32px;
 }
 
 .team-social-item {
@@ -295,6 +298,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 8px;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -330,14 +334,14 @@ body {
   align-items: center;
   width: 168px;
   height: 88px;
-  color: #8e8f99;
-  border: 1px solid #8e8f99;
+  color: var(--customer-icons-color);
+  border: 1px solid var(--customer-icons-color);
   border-radius: 4px;
 }
 .customers-link:hover,
 .customers-link:focus {
-  color: #404bbf;
-  border: 1px solid #404bbf;
+  color: var(--special-buttons-color);
+  border: 1px solid var(--special-buttons-color);
 }
 
 .customers-list-icon {
@@ -346,12 +350,7 @@ body {
 
 /* CUSTOMERS SECTION */
 
-/* Footer */
-
-.second-logo {
-  margin-top: 100px;
-}
-
+/* FOOTER */
 .footer {
   background: var(--title-text-color);
   padding: 100px 0;
@@ -359,6 +358,9 @@ body {
 }
 .second-logo-footer {
   color: var(--buttons-background-color);
+}
+.second-logo {
+  margin-top: 100px;
 }
 .footer-text {
   margin-top: 16px;
@@ -375,13 +377,6 @@ body {
 .footer-container {
   margin-left: 120px;
   width: 208px;
-}
-container-second {
-  width: 100%;
-  max-width: 264px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 16px;
 }
 .social-media-text {
   color: var(--primary-white-color);
@@ -404,14 +399,17 @@ container-second {
   height: 100%;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  color: #f4f4fd;
+  color: var(--buttons-background-color);
+}
+.social-media-link:is(:hover, :focus) {
+  background: var(--footer-special-color);
 }
 .social-media-icon {
   fill: currentColor;
 }
 /*  Footer */
 
-/* Portfolio SEction */
+/* PORTFOLIO PAGE SECTION */
 .score {
   margin-bottom: 72px;
   display: flex;
@@ -422,11 +420,10 @@ container-second {
   color: var(--accent-color);
   background-color: var(--buttons-background-color);
   cursor: pointer;
-
   padding: 12px 24px;
   width: 116px;
   height: 48px;
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--footer-text-color);
   border-radius: 4px;
 }
 .hero-site-buttons:hover,
@@ -454,19 +451,14 @@ container-second {
   flex-basis: calc((100% - 48px) / 3);
 }
 
-.person-name {
-  margin-top: 32px;
-}
-
 .person-position {
   margin-top: 8px;
 }
 .card-content {
-  padding-left: 16px;
-  padding-bottom: 32px;
+  padding: 32px 16px;
 }
 .card {
-  border: 1px solid #e7e9fc;
+  border: 1px solid var(--footer-text-color);
 }
 .team-section-portfolio:is(:hover, :focus) {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
