@@ -137,7 +137,9 @@ img {
   margin-left: auto;
   flex-grow: 1;
   max-width: 1440px;
+  width: 100%;
   background-size: cover;
+
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
